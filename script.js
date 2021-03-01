@@ -4,9 +4,11 @@ let cards = document.querySelectorAll('.card');
 console.log(cards);
 
 function flip() {
-  this.classList.toggle("flip")
+  this.classList.toggle('flip')
 }
 
 for (let i = 0; i < cards.length; i ++) {
-  cards[i].addEventListener("click", flip())
+  cards[i].addEventListener("click", flip)
 }
+
+// cards.forEach(card => card.addEventListener('click', flip));
