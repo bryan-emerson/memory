@@ -17,3 +17,18 @@ body {
   width: 640px;
   height: 640px;
 }
+
+.card {
+  width: calc(25% - 10px);
+  height: calc(33.333% -10px);
+  margin: 5px;
+  position: relative;
+}
+
+.front, .back {
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+  position: absolute;
+  background: rgb(226, 236, 218);
+}
