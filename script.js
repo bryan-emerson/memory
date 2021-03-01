@@ -2,10 +2,18 @@ console.log('whats good fam')
 
 let cards = document.querySelectorAll('.card');
 console.log(cards);
+let reload = document.querySelector('button');
+console.log(reload)
 let flipped = false;
 let firstFlip;
 let secondFlip;
 let boardLocked = false;
+
+reload.addEventListener("click", refreshPage)
+
+function refreshPage(){
+  window.location.reload();
+}
 
 function doesItMatch() {
   if (firstFlip.dataset.language === secondFlip.dataset.language) {
@@ -52,9 +60,17 @@ function flip() {
 
 }
 
+(function shuffle() {
+  cards.forEach(card=> {
+    let position = Math.floor(Math.random() * 12);
+    card.style.order = position;
+  })
+})();
+
 for (let i = 0; i < cards.length; i ++) {
   cards[i].addEventListener("click", flip)
 }
+
 
 // cards.forEach(card => card.addEventListener('click', flip));
 

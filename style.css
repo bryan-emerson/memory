@@ -6,7 +6,8 @@
 
 body {
   height: 100vh;
-  display: flex;
+  margin-top: 10vh;
+  /* display: flex; */
   background: #5f7a7a;
 }
 
@@ -48,4 +49,15 @@ body {
 
 .flip {
   transform: rotateX(180deg);
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  margin-right: 40px;
+  font-size: 24px;
 }
