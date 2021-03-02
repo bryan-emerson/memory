@@ -4,6 +4,7 @@ let cards = document.querySelectorAll('.card');
 console.log(cards);
 let reload = document.querySelector('button');
 console.log(reload)
+
 let flipped = false;
 let firstFlip;
 let secondFlip;
@@ -43,8 +44,10 @@ function reset() {
   [first, second] = [null, null];
 }
 
+
+
 function flip() {
-  if (boardLocked) return;
+  if (boardLocked) return; //if board locked from 2 cur flipd
   if (this === firstFlip) return;
   this.classList.add('flip')
 
@@ -67,6 +70,8 @@ function flip() {
   })
 })();
 
+
+// starts here, add eventlistener onclick and call flip
 for (let i = 0; i < cards.length; i ++) {
   cards[i].addEventListener("click", flip)
 }
