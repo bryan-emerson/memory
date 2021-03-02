@@ -1,3 +1,5 @@
+
+/* box sizing includes borders and padding in the total width/height */
 * {
   padding: 0;
   margin: 0;
@@ -20,6 +22,7 @@ body {
   perspective: 500px;
 }
 
+/* calc does the math for you. transform-style preserve 3d makes it so you dont just see the back side of the card(would be a 2d flip w out it*/
 .card {
   width: calc(25% - 10px);
   height: calc(33.333% -10px);
@@ -31,10 +34,11 @@ body {
 }
 
 .card:active {
-  transform: scale(0.97);
-  transition: transform 2s;
+  transform: scale(0.90);
+  transition: transform .2s;
 }
 
+/* this comma */
 .front, .back {
   height: 100%;
   width: 100%;
