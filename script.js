@@ -1,9 +1,6 @@
-console.log('whats good fam')
-
 let cards = document.querySelectorAll('.card');
-console.log(cards);
+//console.log(cards);
 let reload = document.querySelector('button');
-console.log(reload)
 
 let flipped = false;
 let firstFlip;
@@ -44,10 +41,8 @@ function reset() {
   [first, second] = [null, null];
 }
 
-
-
 function flip() {
-  if (boardLocked) return; //if board locked from 2 cur flipd
+  if (boardLocked) return; //if board locked from 2 curently flipped
   if (this === firstFlip) return;
   this.classList.add('flip')
 
